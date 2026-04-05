@@ -74,7 +74,7 @@ export class ChatAgent extends AIChatAgent<Env> {
 
     const state = this.state as { memories?: string[] };
     const result = streamText({
-      model: workersai("@cf/meta/llama-3.3-70b-instruct-fp8-fast", {
+      model: workersai("@cf/zai-org/glm-4.7-flash", {
         sessionAffinity: this.sessionAffinity
       }),
       system: `You are a helpful assistant with memory. You can check the weather, get the user's timezone, run calculations, schedule tasks, and remember facts about the user.
